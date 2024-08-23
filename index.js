@@ -1,5 +1,5 @@
 const searchObj = require("./search");
-const host = "localhost";
+const host = "0.0.0.0";
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,6 +41,6 @@ app.post("/search", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(port, host () => {
   console.log(`Server running at http://${host}:${port}`);
 });
